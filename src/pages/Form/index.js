@@ -14,18 +14,18 @@ export default function MySpace() {
   const [imageUrl, setImage] = useState("");
 
   const dispatch = useDispatch();
-  
+
   const navigate = useNavigate();
 
- function submitForm(event) {
-   event.preventDefault();
+  function submitForm(event) {
+    event.preventDefault();
 
-   dispatch(postStory(name, content, imageUrl));
+    dispatch(postStory(name, content, imageUrl));
 
-   setName("");
-   setContent("");
-   setImage("");
- }
+    setName("");
+    setContent("");
+    setImage("");
+  }
 
   return (
     <Container>
@@ -55,14 +55,13 @@ export default function MySpace() {
           </Form.Text> */}
         </Form.Group>
 
-        <Form.Group >
+        <Form.Group>
           <Form.Label>imageUrl</Form.Label>
           <Form.Control
             value={imageUrl}
             onChange={(event) => setImage(event.target.value)}
             type="text"
             placeholder="url"
-            
           />
         </Form.Group>
         <Form.Group className="mt-5">
